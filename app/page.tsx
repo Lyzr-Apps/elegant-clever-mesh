@@ -1,11 +1,14 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import { useState, useEffect, useRef } from 'react'
 import { Settings, Send, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
+
+// Disable static generation for this page since it uses client-side state
+export const dynamic = 'force-dynamic'
 
 const AGENT_ID = '6921973e23b88b385103d189'
 

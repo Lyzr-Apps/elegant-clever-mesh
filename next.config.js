@@ -44,6 +44,9 @@ const nextConfig = {
       },
     ]
   },
+
+  // Disable static generation to avoid Html import issues with error pages
+  output: 'standalone',
 }
 
 module.exports = nextConfig
